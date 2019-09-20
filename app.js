@@ -4,14 +4,23 @@ const express = require('express');
 const bodyParser = require('body-parser');
 
 const errorController = require('./controllers/error');
+const db = require('./util/database');
 
 const app = express();
 
-app.set('view engine', 'ejs');
-app.set('views', 'views');
-
+// Routes
 const adminRoutes = require('./routes/admin');
 const shopRoutes = require('./routes/shop');
+
+db.execute('SELECT * FROM products')
+  .then((result) => {
+    console.log(result[0][0].description);
+  })
+  .catch((err) => {
+    console.error(err.message);
+  });
+app.set('view engine', 'ejs');
+app.set('views', 'views');
 
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(express.static(path.join(__dirname, 'public')));
@@ -21,4 +30,7 @@ app.use(shopRoutes);
 
 app.use(errorController.get404);
 
-app.listen(3000);
+const PORT = 3000 || process.env.PORT;
+app.listen(PORT, () => {
+  console.log(`Server listening on PORT ${PORT}`);
+});

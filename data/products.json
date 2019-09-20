@@ -1,1 +1,23 @@
-[{"id":"123245","title":"A Book","imageUrl":"https://www.publicdomainpictures.net/pictures/10000/velka/1-1210009435EGmE.jpg","description":"This is an awesome book!","price":"19"}]
+[
+  {
+    "id": "123245",
+    "title": "A Book",
+    "imageUrl": "https://www.publicdomainpictures.net/pictures/10000/velka/1-1210009435EGmE.jpg",
+    "description": "This is an awesome book!",
+    "price": "19"
+  },
+  {
+    "id": "0.16800905081968165",
+    "title": "Penis ",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Erect_penis_measurement.png/220px-Erect_penis_measurement.png",
+    "description": "Very large and sexy penis",
+    "price": "220"
+  },
+  {
+    "id": "0.6469409854812267",
+    "title": "Penis ",
+    "imageUrl": "https://upload.wikimedia.org/wikipedia/commons/thumb/e/e7/Erect_penis_measurement.png/220px-Erect_penis_measurement.png",
+    "description": "Very large and sexy penis",
+    "price": "220"
+  }
+]
